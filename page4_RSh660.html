@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_RSh660.css">
+    <link rel="stylesheet" href="css/nav_RSh660.css">
+    <link rel="stylesheet" href="css/responsive_RSh660.css">
+    <link rel="stylesheet" href="css/footer_RSh660.css">
+    <script src="script/index_RSh660.js" defer></script>
+    <title>Canadian Voyage</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="navbar-parent">
+                <ul id="navbar">
+
+                    <li id="navbar-profile-pic">
+                        <img class="logo" src="images/logo.png" alt="">
+
+                    </li>
+                    <li class="navbar-containers" id="canadaLogo">
+                        <img class="logo" src="images/canada-logo.png" alt="">
+
+
+                    </li>
+                    <li id="navigations" class="navbar-containers">
+                        <a href="index.html" class="navbarContent">Home</a>
+                        <a href="page2_RSh660.html" class="navbarContent">About</a>
+                        <a href="page3_RSh660.html" class="navbarContent">Appointments</a>
+                        <a href="page4_RSh660.html" class="navbarContent">Contact Us</a>
+                        <a href="page5_RSh660.html" class="navbarContent">Essentials</a>
+                        <!-- <button id="navbarLoginButton">Login</button> -->
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+        </nav>
+    </header>
+    <section>
+        <h1 id="second_page_heading">
+            CONTACT US
+        </h1>
+        <form action="./page6_RSh660.html" class="flexAndImageContainer" id="contactForm" method="get">
+            <div id="formDiv">
+                <div class="form-elements">
+                    <label for="gname" class="formLabel">Given Name:</label>
+                    <input type="text" class="formInputs" name="gname" id="gname" placeholder="Given Name" required>
+                </div>
+                <div class="form-elements">
+                    <label for="lname" class="formLabel">Last Name:</label>
+                    <input type="text" class="formInputs" name="lname" id="lname" placeholder="Last Name" required>
+                </div>
+                <div class="form-elements">
+                    <label for="countryName" class="formLabel">Country Of Origin:</label>
+                    <input type="text" class="formInputs" placeholder="Canada" name="countryName" id="countryName" required >
+                </div>
+                <div class="form-elements">
+                    <label for="date" class="formLabel">Date of Arrival in Canada</label>
+                    <input type="date" class="formInputs"  id="date" placeholder="mm/dd/yyyy" required>
+                </div>
+                <div class="form-elements">
+                    <label for="date2" class="formLabel">Date of Appointment</label>
+                    <input type="date" class="formInputs"  id="date2" placeholder="mm/dd/yyyy" required>
+                </div>
+                <div class="form-elements">
+                    <label for="status1" class="formLabel">Immigration Status in Canada</label>
+                    <select name="status1" id="status1" class="formInputs" name="status1" required>
+                        <option value="noOption">Select the option</option>
+                        <option value="Student">Student</option>
+                        <option value="Temperory Worker">Work Permit</option>
+                        <option value="PR">Permanent Residence(PR)</option>
+                    </select>
+                </div>
+                <div class="form-elements">
+                    <label for="media" class="formLabel" >Purpose of Inquiry</label>
+                    <select name="media" id="media" class="formInputs">
+                        <option value="noSelect">Select the option</option>
+                        <option value="Work Related">Work Related</option>
+                        <option value="Study Related">Study Related</option>
+                        <option value="Events Meetup">Events Meetup</option>
+                        <option value="Rentals">Rental</option>
+                        <option value="Visa Related">Visa Related</option>
+                    </select>
+                </div>
+
+                <div class="form-elements">
+                    <label class="formLabel"> Preferred Method of Contact</label>
+                    <span class="formInputs">
+                        <input type="radio" name="howToContact" id="email"  onchange="radioValueChange('emailContact','email_id')" required>
+                        <label for="email">Email</label>
+                        <input type="radio" name="howToContact" id="phone"  onchange="radioValueChange('phoneContact','phone_num')">
+                        <label for="phone">Phone</label>
+                    </span>
+
+                </div>
+                <div class="form-elements formDynamicContent" id="emailContact">
+                    <label for="email" class="formLabel">Email</label>
+                    <input type="email" class="formInputs emailPhoneInput" id="email_id" placeholder="dummy@mail.com">
+                </div>
+                <div class="form-elements formDynamicContent" id="phoneContact">
+                    <label for="phone" class="formLabel">Phone No.</label>
+                    <input type="number" class="formInputs emailPhoneInput" id="phone_num" placeholder="123456789" pattern="\d{10}">
+                </div>
+                <div class="form-elements">
+                    <label for="text" class="formLabel">Additional Comments</label>
+                    <textarea name="" rows="4" cols="50" id="comments" class="formInputs"
+                        placeholder="Write Any Comment or leave empty"></textarea>
+                </div>
+                <div id="form_btns">
+                    <input type="submit" value="Submit Data"  onClick="return processData(this.form)"><input type="reset"
+                        value="Clear Input" onclick="location.reload()">
+                </div>
+                <div>
+                    <p id="display_info"></p>
+                </div>
+            </div>
+            
+
+
+
+
+
+        </form>
+    </section>
+
+
+    
+
+    </section>
+
+    <script>
+        // function initializePage() {
+        //         // the array of objects for the select media option
+        //         let select = [
+        //             { val: "", text: "Select Media" },
+        //             { val: "blueberry.jpg", text: "Work Related" },
+        //             { val: "strawberry.jpg", text: "study related" },
+        //             { val: "blueberry_icecream.jpg", text: "Blueberry Ice Cream" }
+        //         ]
+
+        //         let target = document.getElementById("heading");
+        //         target.innerHTML = "Assignment 5 - Raghav Sharma(300411660)";
+        //         let target1 = document.getElementById("media");
+
+        //         for (let i = 0; i < select.length; i++) {
+        //             let op = document.createElement("option");
+        //             op.value = select[i].val;
+        //             op.text = select[i].text;
+        //             target1.append(op);
+
+        //         }
+    </script>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Canadian Voyage. All rights reserved.</p>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/raghav_sharma11?igsh=MWZjemkyOW81enY2bg%3D%3D&utm_source=qr"
+                    target="_blank"><img src="images/instagram-brands.svg" alt="Instagram" /></a>
+                <a href="https://www.youtube.com/@CanadianVoyage"><img src="images/youtube-brands.svg"
+                        alt="YouTube" /></a>
+                <a href="#"><img src="images/linkedin-brands.svg" alt="Facebook" /></a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>

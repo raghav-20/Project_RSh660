@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style_RSh660.css">
+    <link rel="stylesheet" href="css/nav_RSh660.css">
+    <link rel="stylesheet" href="css/responsive_RSh660.css">
+    <link rel="stylesheet" href="css/footer_RSh660.css">
+    <script src="script/index_RSh660.js"></script>
+    <title>Canadian Voyage</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div id="navbar-parent">
+                <ul id="navbar">
+
+                    <li id="navbar-profile-pic">
+                        <img class="logo" src="images/logo.png" alt="">
+
+                    </li>
+                    <li class="navbar-containers" id="canadaLogo">
+                        <img class="logo" src="images/canada-logo.png" alt="">
+
+
+                    </li>
+                    <li id="navigations" class="navbar-containers">
+                        <a href="index.html" class="navbarContent">Home</a>
+                        <a href="page2_RSh660.html" class="navbarContent">About</a>
+                        <a href="page3_RSh660.html" class="navbarContent">Appointments</a>
+                        <a href="page4_RSh660.html" class="navbarContent">Contact Us</a>
+                        <a href="page5_RSh660.html" class="navbarContent">Essentials</a>
+                        <!-- <button id="navbarLoginButton">Login</button> -->
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+
+        </nav>
+    </header>
+    <section>
+        <h1 id="second_page_heading">
+            ESSENTIALS
+        </h1>
+        <section id="machines">
+
+            <div class="plans" id="plan1">
+                <h2>Immigration Checklist Generator </h2>
+                <button id="btn-plan1" class="btn-plans" onclick="openMachine('immiChecklist')">Open </button>
+            </div>
+            <div class="plans" id="plan2">
+                <h2>Settlement Guide Customizer </h2>
+                <button id="btn-plan2" class="btn-plans" onclick="openMachine('settleGuide')">Open</button>
+            </div>
+            <!-- <div class="plans" id="plan3">
+                <h2>"Important Dates to Remember" Timeline </h2>
+                <button id="btn-plan3" class="btn-plans">Book Now</button>
+            </div>
+            <div class="plans" id="plan3">
+                <h2>Places to Explore </h2>
+                <button id="btn-plan3" class="btn-plans">Book Now</button>
+            </div>
+            <div class="plans" id="plan3">
+                <h2>Job Market Snapshot by Province</h2>
+                <button id="btn-plan3" class="btn-plans">Book Now</button>
+            </div> -->
+            <div class="plans" id="plan3">
+                <h2>Cost Of Living Calculator</h2>
+                <button id="btn-plan3" class="btn-plans" onclick="openMachine('colCalc')">Open</button>
+            </div>
+        </section>
+    </section>
+
+    <section id="immiChecklist" class="essentialMachines">
+        <h1 class="machinesHeading">Immigration Checklist Generator</h1>
+        <div>
+            <select id="immiCheckType" onchange="generateChecklist()">
+                <option>Select Immigration Type</option>
+                <option>Student</option>
+                <option>Worker</option>
+                <option>PR</option>
+            </select>
+            <div class="outputtDiv" id="generatedChecklist"></div>
+        </div>
+    </section>
+
+    <section id="settleGuide" class="essentialMachines">
+        <h1 class="machinesHeading">Settlement Guide Customizer</h1>
+        <div>
+            <select id="entryType" onchange="updateGuide()">
+                <option value="">Select Entry Type</option>
+                <option>Student</option>
+                <option>PR</option>
+                <option>Worker</option>
+            </select>
+            <div class="outputtDiv" id="guideOutput"></div>
+        </div>
+    </section>
+
+    <section id="colCalc" class="essentialMachines">
+        <h1 class="machinesHeading">Cost Of Living Calculator</h1>
+        <div>
+            <select id="city">
+                <option>Select the City</option>
+                <option>Toronto</option>
+                <option>Calgary</option>
+                <option>Vancouver</option>
+                <option>Montreal</option>
+                <option>Edmonton</option>
+                <option>Halifax</option>
+            </select>
+
+
+        </div>
+        <div>
+            <input type="number" id="people" placeholder="Family Size" />
+            <button onclick="calculateCost()">Estimate</button>
+            <p id="costOutput"></p>
+        </div>
+
+    </section>
+    <!-- 
+    <section id="localResourceFinder" class="essentialMachines">
+        <h1>Places to Explore</h1>
+        <div>
+            <select id="immiCheckType" onchange="generateChecklist()">
+                <option>Select Immigration Type</option>
+                <option>Student</option>
+                <option>PR</option>
+            </select>
+            <div id="generatedChecklist"></div>
+        </div>
+    </section>
+    <section id="jobMarketSnapshot" class="essentialMachines">
+        <h1>Immigration Checklist Generator</h1>
+        <div>
+            <select id="immiCheckType" onchange="generateChecklist()">
+                <option>Select Immigration Type</option>
+                <option>Student</option>
+                <option>PR</option>
+            </select>
+            <div id="generatedChecklist"></div>
+        </div>
+    </section>
+    <section id="colCalc" class="essentialMachines">
+        <h1>Immigration Checklist Generator</h1>
+        <div>
+            <select id="immiCheckType" onchange="generateChecklist()">
+                <option>Select Immigration Type</option>
+                <option>Student</option>
+                <option>PR</option>
+            </select>
+            <div id="generatedChecklist"></div>
+        </div>
+    </section> -->
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Canadian Voyage. All rights reserved.</p>
+
+            <!-- Social Media Icons -->
+            <div class="social-icons">
+                <a href="https://www.instagram.com/raghav_sharma11?igsh=MWZjemkyOW81enY2bg%3D%3D&utm_source=qr"
+                    target="_blank"><img src="images/instagram-brands.svg" alt="Instagram" /></a>
+                <a href="https://www.youtube.com/@CanadianVoyage"><img src="images/youtube-brands.svg"
+                        alt="YouTube" /></a>
+                <a href="#"><img src="images/linkedin-brands.svg" alt="Facebook" /></a>
+            </div>
+
+        </div>
+    </footer>
+</body>
+
+</html>
