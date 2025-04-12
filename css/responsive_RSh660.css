@@ -1,0 +1,112 @@
+@media (max-width: 900px) {
+
+    #canadaLogo {
+        display: none;
+    }
+
+    #navbar-profile-pic {
+        text-align: center;
+    }
+
+    #youtube_container {
+        flex-direction: column;
+    }
+
+    #youtube_container2 {
+        border: none;
+    }
+}
+
+@media (max-width: 760px) {
+    p {
+        letter-spacing: 1px;
+        line-height: 25px;
+    }
+
+    #whoCourseContent {
+        padding: 20px 0;
+    }
+
+    #prices {
+        flex-direction: column;
+    }
+
+    #machines {
+        flex-direction: column;
+    }
+
+
+}
+
+@media (max-width: 600px) {
+    #newCan {
+        font-size: 40px;
+        padding: 20px;
+    }
+
+    #canada {
+        font-size: 60px;
+        padding: 15px;
+    }
+
+    #needHelp {
+        padding: 20px;
+    }
+
+    #fillForm {
+        padding: 20px;
+    }
+
+    #courseTarget {
+        width: 90%
+    }
+}
+
+@media (max-width: 550px) {
+    p {
+        letter-spacing: 1px;
+        line-height: 20px;
+
+    }
+
+    #whoCourseContent {
+        padding: 10px 0;
+    }
+
+    #whatToExpectContainer {
+        margin-top: 20px;
+    }
+
+    #newcomers_help {
+        padding: 20px;
+    }
+
+    #navbar {
+        flex-direction: column;
+    }
+
+    #second_page_heading {
+        padding: 202px 50px 50px 50px;
+    }
+}
+
+@media (max-width: 415px) {
+    #content {
+        padding-top: 260px;
+    }
+
+    #whoCourse {
+        font-size: 30px;
+        margin-top: 20px;
+    }
+
+    #whoCourseContent {
+        font-size: 15px;
+    }
+
+    #navigations {
+        margin-right: 20px;
+        width: 100%;
+        font-size: 11.5px;
+    }
+}

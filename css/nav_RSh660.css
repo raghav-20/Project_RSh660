@@ -1,0 +1,80 @@
+#navbar-parent {
+    position: fixed;
+    background-color: black;
+    text-align: center;
+}
+
+#navbar {
+    display: flex;
+    /* background-color: black; */
+    margin: 0;
+    justify-content: space-around;
+    padding: 10px;
+    /* height: 10px; */
+    align-items: center;
+    /* position: fixed; */
+    top: 0;
+    width: 100vw;
+
+}
+
+#navigations {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.navbarContent {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.navbarContent:hover::after {
+    width: 100%;
+}
+
+.navbarContent::after {
+    width: 0;
+    background-color: rgb(249, 168, 37);
+    content: "";
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    transition: width 0.4s ease 0s;
+    height: 2.5px;
+}
+
+
+.navbar-containers {
+    text-align: center;
+    flex: 1;
+}
+
+#navbar-profile-pic {
+    text-align: left;
+    flex: 1;
+}
+
+#navbarLoginButton {
+    background-color: #317AE7;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+}
+
+
+.logo {
+    height: 70px;
+    width: 70px;
+    border-radius: 500px;
+    vertical-align: center;
+
+}
+
+#navbarLoginButton:hover {
+    cursor: pointer;
+}
