@@ -1,6 +1,6 @@
 
-// Set interval is JS function which calls the function after specific amount of time declared in the variable
-var i = 0;
+
+let i = 0;
 
 window.addEventListener('load', () => {
     showDynamicContent();
@@ -310,7 +310,7 @@ function processData(form) {
 
 
 
-    let textBox = document.getElementById("comments").innerText;
+    let textBox = document.getElementById("comments").value;
 
 
     
@@ -318,7 +318,7 @@ function processData(form) {
         "First Name: " + first_Name + "<br>" + "Last Name: "+last_Name+ "<br>"+
         "Course Code: " + country_n + "<br>" +
         "Date: " + date_ + "<br>" + 
-        "Date of App" +dateOfAppointment+"<br>"+
+        "Date of App " +dateOfAppointment+"<br>"+
         "Immigration Status: " + immigration + "<br>" +
         "Student Purpose of Enquiry: " + purpose__ + "<br>" +
         "Any Comments: " + textBox + "<br>" +
