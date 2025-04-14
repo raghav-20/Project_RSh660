@@ -316,7 +316,7 @@ function processData(form) {
     
     let display = "<h1>Submitted Data<br></h1><hr id='submittedDataHr'>" +
         "First Name: " + first_Name + "<br>" + "Last Name: "+last_Name+ "<br>"+
-        "Course Code: " + country_n + "<br>" +
+        "Country: " + country_n + "<br>" +
         "Date: " + date_ + "<br>" + 
         "Date of App " +dateOfAppointment+"<br>"+
         "Immigration Status: " + immigration + "<br>" +
