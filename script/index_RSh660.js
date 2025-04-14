@@ -11,7 +11,7 @@ window.addEventListener('load', () => {
 
 function showDynamicContent() {
     if (document.getElementById("dynamicSuggestions") != null) {
-        var facts = [
+        let facts = [
             "Canada has two official languages: English and French.",
             "You can apply for a library card with just your address.",
             "Public healthcare does not cover dental services.",
@@ -39,14 +39,14 @@ function openMachine(elementId) {
     });
     document.getElementById(elementId).style.display = 'flex';
 }
-
+//tried using the page through onclick event instead of <a> tag
 function navigateToContact() {
-    window.open("./index3.html", "_blank");
+    window.open("./page3_RSh660.html", "_blank");
 }
 
 function generateChecklist() {
-    var type = document.getElementById("immiCheckType").value;
-    var items = [];
+    let type = document.getElementById("immiCheckType").value;
+    let items = [];
 
     if (type === "Student") {
         items = ["Study Permit", "Health Insurance", "Open a bank account", "SIN Number"];
@@ -61,7 +61,7 @@ function generateChecklist() {
     document.getElementById("generatedChecklist").innerHTML = "<ul>" + items.map(i => `<li>${i}</li>`).join("") + "</ul>";
 }
 
-var guides = {
+let guides = {
     Student: [
         "Apply for a Social Insurance Number (SIN)",
         "Register for provincial health insurance (if applicable)",
@@ -82,19 +82,19 @@ var guides = {
 };
 
 function updateGuide() {
-    var type = document.getElementById("entryType").value;
-    var items = guides[type] || [];
+    let type = document.getElementById("entryType").value;
+    let items = guides[type] || [];
     document.getElementById("guideOutput").innerHTML =
         "<ul>" + items.map(i => `<li>${i}</li>`).join("") + "</ul>";
 }
 
 function calculateCost() {
-    var city = document.getElementById("city").value;
+    let city = document.getElementById("city").value;
     // I used Number to convert string into integer this logic i learned in C#(Course- 1175)
-    var people = Number(document.getElementById("people").value);
-    var baseCosts = { Toronto: 1800, Calgary: 1400, Halifax: 1300, Vancouver: 2000, Edmonton: 1200, Montreal: 1500 };
-    var base = baseCosts[city] || 0;
-    var total = base + people * 400;
+    let people = Number(document.getElementById("people").value);
+    let baseCosts = { Toronto: 1800, Calgary: 1400, Halifax: 1300, Vancouver: 2000, Edmonton: 1200, Montreal: 1500 };
+    let base = baseCosts[city] || 0;
+    let total = base + people * 400;
 
     document.getElementById("costOutput").textContent = `Estimated cost: $${total}/month\n(Note: this is only the Estimation)`;
 }
@@ -102,13 +102,13 @@ function calculateCost() {
 
 
 function animateCount(el, target, duration = 2000) {
-    var start = 0;
-    var startTime = performance.now();
+    let start = 0;
+    let startTime = performance.now();
 
     function update(currentTime) {
-        var elapsed = currentTime - startTime;
-        var progress = Math.min(elapsed / duration, 1);
-        var currentCount = Math.floor(progress * target);
+        let elapsed = currentTime - startTime;
+        let progress = Math.min(elapsed / duration, 1);
+        let currentCount = Math.floor(progress * target);
         el.textContent = currentCount;
 
         if (progress < 1) {
@@ -121,11 +121,11 @@ function animateCount(el, target, duration = 2000) {
     requestAnimationFrame(update);
 }
 
-var counterElement = document.getElementById('counter');
-var counterElement1 = document.getElementById('watch_time');
-var hasAnimated = false;
+let counterElement = document.getElementById('counter');
+let counterElement1 = document.getElementById('watch_time');
+let hasAnimated = false;
 // 
-var observer = new IntersectionObserver((entries) => {
+let observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting && !hasAnimated) {
             animateCount(counterElement, 100);
@@ -139,12 +139,12 @@ if (document.getElementById("stats") != null) {
     observer.observe(document.getElementById('stats'));
 }
 function startEffect(element, color) {
-    var div1 = document.getElementById(element.id);
+    let div1 = document.getElementById(element.id);
     div1.style.backgroundColor = color;
     div1.style.cursor = "pointer";
 }
 function endEffect(element, color) {
-    var div1 = document.getElementById(element.id);
+    let div1 = document.getElementById(element.id);
     div1.style.backgroundColor = color;
     // div1.style.cursor = "pointer";
 }
