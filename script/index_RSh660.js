@@ -318,7 +318,7 @@ function processData(form) {
         "First Name: " + first_Name + "<br>" + "Last Name: "+last_Name+ "<br>"+
         "Country: " + country_n + "<br>" +
         "Date: " + date_ + "<br>" + 
-        "Date of App " +dateOfAppointment+"<br>"+
+        "Date of Appointment: " +dateOfAppointment+"<br>"+
         "Immigration Status: " + immigration + "<br>" +
         "Student Purpose of Enquiry: " + purpose__ + "<br>" +
         "Any Comments: " + textBox + "<br>" +
